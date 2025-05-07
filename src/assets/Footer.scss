@@ -1,0 +1,100 @@
+.footer {
+    background-color: #EBEBEB;
+    padding: 2rem 8.33%;
+    font-size: 15px;
+    
+    @media (max-width: 768px) {
+        padding: 2rem 5.208%;
+    }
+    
+    @media (max-width: 576px) {
+        padding: 2.5rem 5.333%;
+        background-color: white;
+    }
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        
+        @media (max-width: 768px) {
+            justify-content: left;
+            gap: 2rem;
+            align-items: baseline;
+        }
+        
+        @media (max-width: 576px) {
+            flex-direction: column;
+        }
+    }
+
+    &__contacts {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: .8rem;
+        @media (max-width: 768px) {
+            height: fit-content;
+            flex-direction: row-reverse;
+            gap: 4rem;
+            flex-wrap: wrap;
+            flex-grow: 1;
+        }
+        
+        @media (max-width: 576px) {
+            flex-direction: column;
+            gap: 2rem;
+            align-items: start;
+        }
+    }
+
+    &__email, &__language, &__social {
+        display: flex;
+        width: fit-content;
+        gap: .8rem;
+        flex-direction: row;
+        @media (max-width: 768px) {
+            flex-direction: row;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: #525252;
+        cursor: pointer;
+        
+        &:hover {
+            color: #EE26C2;
+        }
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+    }
+
+    &__language {
+        cursor: pointer;
+        
+        &-option {
+            &:hover {
+                color: #EE26C2;
+            }
+            
+            &--selected {
+                color: #EE26C2;
+            }
+        }
+    }
+
+    &__social {
+        &-link {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
